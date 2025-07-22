@@ -1,9 +1,11 @@
 <script lang="ts">
 	import DropdownMenu from '$lib/components/DropdownMenu.svelte';
+	import { onMount } from 'svelte';
 
 	export let scrollToSection: (sectionId: string) => void;
 
 	let isMenuOpen = false;
+	let headerElement: HTMLElement;
 
 	function toggleMenu() {
 		isMenuOpen = !isMenuOpen;
@@ -12,14 +14,30 @@
 	function closeMenu() {
 		isMenuOpen = false;
 	}
+
+	function handleClickOutside(event: MouseEvent) {
+		if (isMenuOpen && headerElement && !headerElement.contains(event.target as Node)) {
+			closeMenu();
+		}
+	}
+
+	onMount(() => {
+		document.addEventListener('click', handleClickOutside);
+		return () => {
+			document.removeEventListener('click', handleClickOutside);
+		};
+	});
 </script>
 
 <header
-	class="bg-secondary border-primary relative flex items-center justify-between border-b-2 px-6 shadow-md"
+	bind:this={headerElement}
+	class="bg-secondary border-primary fixed top-0 left-0 right-0 z-40 flex items-center justify-between border-b-2 px-6 shadow-md"
 >
 	<!-- Centered Logo -->
 	<div class="flex flex-1 justify-center">
-		<img src="/logoblack-nobg.png" alt="Salon Logo" class="h-34 object-contain" />
+		<a href="/" class="transition-opacity hover:opacity-80">
+			<img src="/logoblack-nobg.png" alt="Salon Logo" class="h-34 object-contain" />
+		</a>
 	</div>
 
 	<!-- Menu Button -->
