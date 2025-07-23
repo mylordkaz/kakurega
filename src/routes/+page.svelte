@@ -1,5 +1,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import type { PageData } from './$types';
+
+	export let data: PageData;
 
 	let openFaq = -1;
 	let showBackToTop = false;
@@ -14,6 +17,23 @@
 
 	function handleScroll() {
 		showBackToTop = window.scrollY > 400;
+	}
+
+	function formatDate(dateString: string): string {
+		const date = new Date(dateString);
+		return date.toLocaleDateString('ja-JP', {
+			year: 'numeric',
+			month: 'long',
+			day: 'numeric'
+		});
+	}
+
+	function truncateContent(content: string, maxLength: number = 150): string {
+		// Remove HTML tags and truncate
+		const textContent = content.replace(/<[^>]*>/g, '');
+		return textContent.length > maxLength 
+			? textContent.substring(0, maxLength) + '...'
+			: textContent;
 	}
 
 	onMount(() => {
@@ -43,11 +63,12 @@
 				<div class="text-light flex h-full items-center justify-center text-2xl">画像</div>
 			</div>
 
-			<button
-				class="bg-card text-primary rounded-full px-12 py-5 text-2xl font-bold transition-all hover:opacity-80"
+			<a
+				href="/reservation"
+				class="bg-card text-primary inline-block rounded-full px-12 py-5 text-2xl font-bold transition-all hover:opacity-80"
 			>
 				今すぐ予約する
-			</button>
+			</a>
 		</div>
 	</section>
 
@@ -99,18 +120,19 @@
 
 				<!-- Reservation Button -->
 				<div class="mb-6 text-center">
-					<button
-						class="bg-card text-primary rounded-full px-12 py-5 text-2xl font-bold transition-all hover:opacity-80"
+					<a
+						href="/reservation"
+						class="bg-card text-primary inline-block rounded-full px-12 py-5 text-2xl font-bold transition-all hover:opacity-80"
 					>
 						ご予約はこちら
-					</button>
+					</a>
 				</div>
 
 				<!-- Menu Link Button -->
 				<div class="absolute right-4 bottom-4">
-					<button class="text-card text-sm underline transition-colors hover:text-gray-100">
+					<a href="/menu" class="text-card text-sm underline transition-colors hover:text-gray-100">
 						完全なメニューはこちら
-					</button>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -267,41 +289,58 @@
 					</a>
 				</div>
 
-				<!-- Blog Post -->
-				<article class="bg-primary rounded-lg p-6">
-					<div class="flex flex-col gap-6 md:flex-row">
-						<!-- Blog Image -->
-						<div class="md:w-1/3">
-							<div class="bg-card-dark h-48 w-full rounded-lg">
-								<div class="text-light flex h-full items-center justify-center text-sm">画像</div>
+{#if data.latestPost}
+					<!-- Blog Post -->
+					<article class="bg-primary rounded-lg p-6">
+						<div class="flex flex-col gap-6 md:flex-row">
+							<!-- Blog Image -->
+							<div class="md:w-1/3">
+								{#if data.latestPost.eyecatch}
+									<div class="h-48 w-full overflow-hidden rounded-lg">
+										<img
+											src={data.latestPost.eyecatch.url}
+											alt={data.latestPost.title}
+											class="h-full w-full object-cover"
+										/>
+									</div>
+								{:else}
+									<div class="bg-card-dark h-48 w-full rounded-lg">
+										<div class="text-light flex h-full items-center justify-center text-sm">画像</div>
+									</div>
+								{/if}
 							</div>
-						</div>
 
-						<!-- Blog Content -->
-						<div class="md:w-2/3">
-							<div class="mb-2">
-								<span class="text-sm text-gray-400">2025年1月15日</span>
-							</div>
-							<h3 class="text-card mb-3 text-xl font-bold">
+							<!-- Blog Content -->
+							<div class="md:w-2/3">
+								<div class="mb-2">
+									<span class="text-sm text-gray-400">{formatDate(data.latestPost.publishedAt)}</span>
+								</div>
+								<h3 class="text-card mb-3 text-xl font-bold">
+									<a
+										href="/blog/{data.latestPost.id}"
+										class="transition-colors hover:text-gray-300"
+									>
+										{data.latestPost.title}
+									</a>
+								</h3>
+								<p class="mb-4 leading-relaxed text-gray-100">
+									{truncateContent(data.latestPost.content)}
+								</p>
 								<a
-									href="/blog/winter-hair-trends-2025"
-									class="transition-colors hover:text-gray-300"
+									href="/blog/{data.latestPost.id}"
+									class="text-card font-semibold transition-colors hover:text-gray-300"
 								>
-									2025年冬のヘアトレンド：今季注目のメンズスタイル
+									続きを読む →
 								</a>
-							</h3>
-							<p class="mb-4 leading-relaxed text-gray-100">
-								寒い季節に映える、洗練されたメンズヘアスタイルをご紹介。ビジネスシーンからカジュアルまで、幅広いシーンで活躍するトレンドスタイルと、自宅でのスタイリングテクニックを詳しく解説します...
-							</p>
-							<a
-								href="/blog/winter-hair-trends-2025"
-								class="text-card font-semibold transition-colors hover:text-gray-300"
-							>
-								続きを読む →
-							</a>
+							</div>
 						</div>
+					</article>
+				{:else}
+					<!-- No blog post available -->
+					<div class="bg-primary rounded-lg p-6 text-center">
+						<p class="text-gray-100">最新のブログ記事はまだありません。</p>
 					</div>
-				</article>
+				{/if}
 			</div>
 		</div>
 	</section>
