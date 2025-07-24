@@ -31,7 +31,7 @@
 	function truncateContent(content: string, maxLength: number = 150): string {
 		// Remove HTML tags and truncate
 		const textContent = content.replace(/<[^>]*>/g, '');
-		return textContent.length > maxLength 
+		return textContent.length > maxLength
 			? textContent.substring(0, maxLength) + '...'
 			: textContent;
 	}
@@ -289,7 +289,7 @@
 					</a>
 				</div>
 
-{#if data.latestPost}
+				{#if data.latestPost}
 					<!-- Blog Post -->
 					<article class="bg-primary rounded-lg p-6">
 						<div class="flex flex-col gap-6 md:flex-row">
@@ -305,7 +305,9 @@
 									</div>
 								{:else}
 									<div class="bg-card-dark h-48 w-full rounded-lg">
-										<div class="text-light flex h-full items-center justify-center text-sm">画像</div>
+										<div class="text-light flex h-full items-center justify-center text-sm">
+											画像
+										</div>
 									</div>
 								{/if}
 							</div>
@@ -313,7 +315,9 @@
 							<!-- Blog Content -->
 							<div class="md:w-2/3">
 								<div class="mb-2">
-									<span class="text-sm text-gray-400">{formatDate(data.latestPost.publishedAt)}</span>
+									<span class="text-sm text-gray-400"
+										>{formatDate(data.latestPost.publishedAt)}</span
+									>
 								</div>
 								<h3 class="text-card mb-3 text-xl font-bold">
 									<a
@@ -409,7 +413,7 @@
 			<h2 class="text-card mb-8 text-2xl font-bold">フォローしてください</h2>
 			<div class="flex justify-center space-x-8">
 				<!-- LINE -->
-				<a href="#" class="transition-all hover:scale-110" aria-label="LINE">
+				<a href="https://lin.ee/741xg1I" class="transition-all hover:scale-110" aria-label="LINE">
 					<img src="/icons/line.svg" alt="LINE" class="h-24 w-24" />
 				</a>
 

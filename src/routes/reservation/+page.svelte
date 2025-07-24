@@ -37,7 +37,7 @@
 				<!-- LINE Button -->
 				<div class="py-2">
 					<a
-						href="#"
+						href="https://lin.ee/741xg1I"
 						class="bg-card text-primary inline-block rounded-full px-12 py-5 text-xl font-bold transition-all hover:opacity-80"
 					>
 						LINEを追加する
