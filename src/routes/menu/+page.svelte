@@ -1,13 +1,12 @@
-
 <svelte:head>
 	<title>Menu - KAKUREGA-LAB</title>
 </svelte:head>
 
 <main class="bg-primary min-h-screen pt-20">
 	<!-- Title -->
-	<section class="bg-primary py-16">
+	<section class="bg-primary pt-32 pb-10">
 		<div class="container mx-auto px-4 text-center">
-			<h1 class="text-card text-4xl font-bold md:text-5xl lg:text-6xl">Menu</h1>
+			<h1 class="text-card text-4xl font-bold md:text-5xl lg:text-6xl">メニュー</h1>
 		</div>
 	</section>
 
@@ -28,8 +27,8 @@
 					<table class="w-full text-left">
 						<thead>
 							<tr class="border-b border-gray-600">
-								<th class="text-card pb-4 pr-4 text-lg font-bold">Service</th>
-								<th class="text-card pb-4 pr-4 text-lg font-bold">Time</th>
+								<th class="text-card pr-4 pb-4 text-lg font-bold">Service</th>
+								<th class="text-card pr-4 pb-4 text-lg font-bold">Time</th>
 								<th class="text-card pb-4 text-lg font-bold">Price</th>
 							</tr>
 						</thead>
@@ -106,10 +105,11 @@
 		<div class="container mx-auto px-4 text-center">
 			<a
 				href="/reservation"
-				class="bg-card text-primary rounded-full px-12 py-5 text-2xl font-bold transition-all hover:opacity-80 inline-block"
+				class="bg-card text-primary inline-block rounded-full px-12 py-5 text-2xl font-bold transition-all hover:opacity-80"
 			>
 				今すぐ予約する
 			</a>
 		</div>
 	</section>
 </main>
+

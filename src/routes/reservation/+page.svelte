@@ -4,7 +4,7 @@
 
 <main class="bg-primary min-h-screen pt-20">
 	<!-- Title -->
-	<section class="bg-primary py-20" style="margin-top: 30px;">
+	<section class="bg-primary pt-32 pb-10">
 		<div class="container mx-auto px-4 text-center">
 			<h1 class="text-card mb-4 text-4xl font-bold md:text-5xl lg:text-6xl">ご予約</h1>
 			<h2 class="text-card text-2xl font-bold opacity-90 md:text-3xl">お問い合わせ</h2>
