@@ -5,12 +5,10 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 const config = {
 	preprocess: vitePreprocess(),
 	kit: {
-		adapter: adapter({
-			routes: {
-				include: ['/*'],
-				exclude: []
-			}
-		})
+		adapter: adapter(),
+		prerender: {
+			handleHttpError: 'warn'
+		}
 	}
 };
 
