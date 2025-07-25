@@ -1,19 +1,14 @@
 <script lang="ts">
-	import Header from '$lib/components/Header.svelte';
-	import Footer from '$lib/components/Footer.svelte';
+	import { onMount } from 'svelte';
+	import type { PageData } from './$types';
+
+	export let data: PageData;
 
 	let openFaq = -1;
 	let showBackToTop = false;
 
 	function toggleFaq(index: number) {
 		openFaq = openFaq === index ? -1 : index;
-	}
-
-	function scrollToSection(sectionId: string) {
-		const section = document.getElementById(sectionId);
-		if (section) {
-			section.scrollIntoView({ behavior: 'smooth' });
-		}
 	}
 
 	function scrollToTop() {
@@ -24,7 +19,22 @@
 		showBackToTop = window.scrollY > 400;
 	}
 
-	import { onMount } from 'svelte';
+	function formatDate(dateString: string): string {
+		const date = new Date(dateString);
+		return date.toLocaleDateString('ja-JP', {
+			year: 'numeric',
+			month: 'long',
+			day: 'numeric'
+		});
+	}
+
+	function truncateContent(content: string, maxLength: number = 150): string {
+		// Remove HTML tags and truncate
+		const textContent = content.replace(/<[^>]*>/g, '');
+		return textContent.length > maxLength
+			? textContent.substring(0, maxLength) + '...'
+			: textContent;
+	}
 
 	onMount(() => {
 		window.addEventListener('scroll', handleScroll);
@@ -34,9 +44,7 @@
 	});
 </script>
 
-<Header {scrollToSection} />
-
-<main class="bg-primary min-h-screen">
+<main class="bg-primary min-h-screen pt-20">
 	<!-- Hero Section -->
 	<section class="bg-primary relative py-20">
 		<div class="container mx-auto px-4 text-center">
@@ -55,11 +63,12 @@
 				<div class="text-light flex h-full items-center justify-center text-2xl">画像</div>
 			</div>
 
-			<button
-				class="bg-card text-primary rounded-full px-12 py-5 text-2xl font-bold transition-all hover:opacity-80"
+			<a
+				href="/reservation"
+				class="bg-card text-primary inline-block rounded-full px-12 py-5 text-2xl font-bold transition-all hover:opacity-80"
 			>
 				今すぐ予約する
-			</button>
+			</a>
 		</div>
 	</section>
 
@@ -111,18 +120,19 @@
 
 				<!-- Reservation Button -->
 				<div class="mb-6 text-center">
-					<button
-						class="bg-card text-primary rounded-full px-12 py-5 text-2xl font-bold transition-all hover:opacity-80"
+					<a
+						href="/reservation"
+						class="bg-card text-primary inline-block rounded-full px-12 py-5 text-2xl font-bold transition-all hover:opacity-80"
 					>
 						ご予約はこちら
-					</button>
+					</a>
 				</div>
 
 				<!-- Menu Link Button -->
 				<div class="absolute right-4 bottom-4">
-					<button class="text-card text-sm underline transition-colors hover:text-gray-100">
+					<a href="/menu" class="text-card text-sm underline transition-colors hover:text-gray-100">
 						完全なメニューはこちら
-					</button>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -263,12 +273,7 @@
 	<section class="bg-primary py-16">
 		<div class="container mx-auto px-4">
 			<div class="card-primary mx-auto max-w-4xl rounded-lg p-8">
-				<h2 class="text-primary mb-6 text-center text-2xl font-bold">インスタグラムの投稿写真</h2>
-				<div class="grid grid-cols-3 gap-4">
-					{#each Array(6) as _, i}
-						<div class="border-secondary bg-card aspect-square rounded-lg border-2 shadow-md"></div>
-					{/each}
-				</div>
+				<div class="elfsight-app-f5bf33f5-bf51-4ea4-99d4-e619a91bda65" data-elfsight-app-lazy></div>
 			</div>
 		</div>
 	</section>
@@ -284,41 +289,62 @@
 					</a>
 				</div>
 
-				<!-- Blog Post -->
-				<article class="bg-primary rounded-lg p-6">
-					<div class="flex flex-col gap-6 md:flex-row">
-						<!-- Blog Image -->
-						<div class="md:w-1/3">
-							<div class="bg-card-dark h-48 w-full rounded-lg">
-								<div class="text-light flex h-full items-center justify-center text-sm">画像</div>
+				{#if data.latestPost}
+					<!-- Blog Post -->
+					<article class="bg-primary rounded-lg p-6">
+						<div class="flex flex-col gap-6 md:flex-row">
+							<!-- Blog Image -->
+							<div class="md:w-1/3">
+								{#if data.latestPost.eyecatch}
+									<div class="h-48 w-full overflow-hidden rounded-lg">
+										<img
+											src={data.latestPost.eyecatch.url}
+											alt={data.latestPost.title}
+											class="h-full w-full object-cover"
+										/>
+									</div>
+								{:else}
+									<div class="bg-card-dark h-48 w-full rounded-lg">
+										<div class="text-light flex h-full items-center justify-center text-sm">
+											画像
+										</div>
+									</div>
+								{/if}
 							</div>
-						</div>
 
-						<!-- Blog Content -->
-						<div class="md:w-2/3">
-							<div class="mb-2">
-								<span class="text-sm text-gray-400">2025年1月15日</span>
-							</div>
-							<h3 class="text-card mb-3 text-xl font-bold">
+							<!-- Blog Content -->
+							<div class="md:w-2/3">
+								<div class="mb-2">
+									<span class="text-sm text-gray-400"
+										>{formatDate(data.latestPost.publishedAt)}</span
+									>
+								</div>
+								<h3 class="text-card mb-3 text-xl font-bold">
+									<a
+										href="/blog/{data.latestPost.id}"
+										class="transition-colors hover:text-gray-300"
+									>
+										{data.latestPost.title}
+									</a>
+								</h3>
+								<p class="mb-4 leading-relaxed text-gray-100">
+									{truncateContent(data.latestPost.content)}
+								</p>
 								<a
-									href="/blog/winter-hair-trends-2025"
-									class="transition-colors hover:text-gray-300"
+									href="/blog/{data.latestPost.id}"
+									class="text-card font-semibold transition-colors hover:text-gray-300"
 								>
-									2025年冬のヘアトレンド：今季注目のメンズスタイル
+									続きを読む →
 								</a>
-							</h3>
-							<p class="mb-4 leading-relaxed text-gray-100">
-								寒い季節に映える、洗練されたメンズヘアスタイルをご紹介。ビジネスシーンからカジュアルまで、幅広いシーンで活躍するトレンドスタイルと、自宅でのスタイリングテクニックを詳しく解説します...
-							</p>
-							<a
-								href="/blog/winter-hair-trends-2025"
-								class="text-card font-semibold transition-colors hover:text-gray-300"
-							>
-								続きを読む →
-							</a>
+							</div>
 						</div>
+					</article>
+				{:else}
+					<!-- No blog post available -->
+					<div class="bg-primary rounded-lg p-6 text-center">
+						<p class="text-gray-100">最新のブログ記事はまだありません。</p>
 					</div>
-				</article>
+				{/if}
 			</div>
 		</div>
 	</section>
@@ -335,39 +361,46 @@
 						<div>
 							<h3 class="text-card mb-2 text-xl font-bold">KAKUREGA-LAB</h3>
 							<div class="space-y-2 text-gray-100">
-								<p>〒150-0001</p>
-								<p>東京都渋谷区神宮前3-15-7</p>
-								<p>第2原宿ビル 2F</p>
+								<p>〒194-0013</p>
+								<p>東京都町田市原町田１丁目１４−４</p>
+								<p>グランドール町田 B102</p>
+								<p>BARBER STYLES町田 店内</p>
 							</div>
 						</div>
 
 						<div>
 							<h4 class="text-card mb-2 text-lg font-semibold">アクセス</h4>
 							<div class="space-y-1 text-gray-100">
-								<p>• JR山手線「原宿駅」徒歩8分</p>
-								<p>• 東京メトロ「表参道駅」徒歩5分</p>
-								<p>• 東京メトロ「明治神宮前駅」徒歩7分</p>
+								<p>• JR横浜線「町田駅」徒歩3分</p>
+								<p>• 小田急線「町田駅」徒歩5分</p>
+								<p>• 新宿駅から小田急線で約30分</p>
+								<p>• 横浜駅からJR横浜線で約30分</p>
 							</div>
 						</div>
 
 						<div>
 							<h4 class="text-card mb-2 text-lg font-semibold">営業時間</h4>
 							<div class="space-y-1 text-gray-100">
-								<p>平日：10:00 - 20:00</p>
-								<p>土日祝：9:00 - 19:00</p>
-								<p class="text-sm text-gray-400">定休日：毎週月曜日</p>
+								<p>月・水〜日：10:00 - 20:00</p>
+								<p>火曜日：10:00 - 14:00</p>
+								<p class="text-sm text-gray-400">年中無休</p>
 							</div>
 						</div>
 					</div>
 
-					<!-- Map Placeholder -->
+					<!-- Google Map -->
 					<div>
-						<div class="bg-card-dark h-80 w-full rounded-lg border-2 border-gray-600">
-							<div class="text-light flex h-full items-center justify-center text-lg">
-								Googleマップ<br />
-								<span class="text-sm text-gray-400">表参道エリア</span>
-							</div>
-						</div>
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.7826!2d139.4487290846562!3d35.5389995495675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDMyJzIwLjQiTiAxMznCsDI2JzU1LjQiRQ!5e0!3m2!1sja!2sjp!4v1642000000000"
+							width="100%"
+							height="320"
+							class="rounded-lg border-2 border-gray-600"
+							style="border:0;"
+							allowfullscreen=""
+							loading="lazy"
+							referrerpolicy="no-referrer-when-downgrade"
+							title="KAKUREGA-LAB Location"
+						></iframe>
 					</div>
 				</div>
 			</div>
@@ -380,12 +413,16 @@
 			<h2 class="text-card mb-8 text-2xl font-bold">フォローしてください</h2>
 			<div class="flex justify-center space-x-8">
 				<!-- LINE -->
-				<a href="#" class="transition-all hover:scale-110" aria-label="LINE">
+				<a href="https://lin.ee/741xg1I" class="transition-all hover:scale-110" aria-label="LINE">
 					<img src="/icons/line.svg" alt="LINE" class="h-24 w-24" />
 				</a>
 
 				<!-- Instagram -->
-				<a href="#" class="transition-all hover:scale-110" aria-label="Instagram">
+				<a
+					href="https://www.instagram.com/kakurega.mwl?igsh=MWV3N2ZhNXQzMGRy"
+					class="transition-all hover:scale-110"
+					aria-label="Instagram"
+				>
 					<img src="/icons/instagram.svg" alt="Instagram" class="h-24 w-24" />
 				</a>
 			</div>
@@ -397,23 +434,11 @@
 {#if showBackToTop}
 	<button
 		on:click={scrollToTop}
-		class="fixed bottom-8 right-8 z-50 h-16 w-16 rounded-full bg-card shadow-2xl border-2 border-primary transition-all duration-300 hover:scale-110 hover:shadow-3xl"
+		class="bg-card border-primary hover:shadow-3xl fixed right-8 bottom-8 z-50 h-16 w-16 rounded-full border-2 shadow-2xl transition-all duration-300 hover:scale-110"
 		aria-label="Back to top"
 	>
-		<svg
-			class="h-7 w-7 mx-auto text-white"
-			fill="none"
-			stroke="currentColor"
-			viewBox="0 0 24 24"
-		>
-			<path
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				stroke-width="2"
-				d="M5 15l7-7 7 7"
-			/>
+		<svg class="mx-auto h-7 w-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
 		</svg>
 	</button>
 {/if}
-
-<Footer />
