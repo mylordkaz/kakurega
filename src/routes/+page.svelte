@@ -7,6 +7,11 @@
 	let openFaq = -1;
 	let showBackToTop = false;
 
+	let instagramSection: HTMLElement;
+	let mapSection: HTMLElement;
+	let instagramLoaded = false;
+	let mapLoaded = false;
+
 	function toggleFaq(index: number) {
 		openFaq = openFaq === index ? -1 : index;
 	}
@@ -29,17 +34,53 @@
 	}
 
 	function truncateContent(content: string, maxLength: number = 150): string {
-		// Remove HTML tags and truncate
 		const textContent = content.replace(/<[^>]*>/g, '');
 		return textContent.length > maxLength
 			? textContent.substring(0, maxLength) + '...'
 			: textContent;
 	}
 
+	function loadInstagram() {
+		if (instagramLoaded) return;
+
+		const script = document.createElement('script');
+		script.src = 'https://static.elfsight.com/platform/platform.js';
+		script.async = true;
+		document.head.appendChild(script);
+		instagramLoaded = true;
+	}
+
+	function setupIntersectionObserver() {
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						if (entry.target === instagramSection && !instagramLoaded) {
+							loadInstagram();
+						}
+						if (entry.target === mapSection && !mapLoaded) {
+							mapLoaded = true;
+						}
+					}
+				});
+			},
+			{
+				rootMargin: '200px 0px',
+				threshold: 0
+			}
+		);
+		if (instagramSection) observer.observe(instagramSection);
+		if (mapSection) observer.observe(mapSection);
+
+		return observer;
+	}
+
 	onMount(() => {
 		window.addEventListener('scroll', handleScroll);
+		const observer = setupIntersectionObserver();
 		return () => {
 			window.removeEventListener('scroll', handleScroll);
+			observer.disconnect();
 		};
 	});
 </script>
@@ -270,10 +311,24 @@
 	</section>
 
 	<!-- Instagram Section -->
-	<section class="bg-primary py-16">
+	<section class="bg-primary py-16" bind:this={instagramSection}>
 		<div class="container mx-auto px-4">
 			<div class="card-primary mx-auto max-w-4xl rounded-lg p-8">
-				<div class="elfsight-app-f5bf33f5-bf51-4ea4-99d4-e619a91bda65" data-elfsight-app-lazy></div>
+				{#if instagramLoaded}
+					<div
+						class="elfsight-app-f5bf33f5-bf51-4ea4-99d4-e619a91bda65"
+						data-elfsight-app-lazy
+					></div>
+				{:else}
+					<div class="flex items-center justify-center py-16">
+						<div class="text-center">
+							<div
+								class="border-t-primary mx-auto mb-4 h-16 w-16 animate-spin rounded-full border-4 border-gray-300"
+							></div>
+							<p class="text-gray-600">Instagramフィードを読み込み中...</p>
+						</div>
+					</div>
+				{/if}
 			</div>
 		</div>
 	</section>
@@ -389,18 +444,31 @@
 					</div>
 
 					<!-- Google Map -->
-					<div>
-						<iframe
-							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.7826!2d139.4487290846562!3d35.5389995495675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDMyJzIwLjQiTiAxMznCsDI2JzU1LjQiRQ!5e0!3m2!1sja!2sjp!4v1642000000000"
-							width="100%"
-							height="320"
-							class="rounded-lg border-2 border-gray-600"
-							style="border:0;"
-							allowfullscreen=""
-							loading="lazy"
-							referrerpolicy="no-referrer-when-downgrade"
-							title="KAKUREGA-LAB Location"
-						></iframe>
+					<div bind:this={mapSection}>
+						{#if mapLoaded}
+							<iframe
+								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3241.7826!2d139.4487290846562!3d35.5389995495675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDMyJzIwLjQiTiAxMznCsDI2JzU1LjQiRQ!5e0!3m2!1sja!2sjp!4v1642000000000"
+								width="100%"
+								height="320"
+								class="rounded-lg border-2 border-gray-600"
+								style="border:0;"
+								loading="lazy"
+								referrerpolicy="no-referrer-when-downgrade"
+								title="KAKUREGA-LAB Location"
+							></iframe>
+						{:else}
+							<!-- Loading placeholder for map -->
+							<div
+								class="flex h-80 items-center justify-center rounded-lg border-2 border-gray-600 bg-gray-800"
+							>
+								<div class="text-center">
+									<div
+										class="border-t-card mx-auto mb-4 h-12 w-12 animate-spin rounded-full border-4 border-gray-300"
+									></div>
+									<p class="text-card">マップを読み込み中...</p>
+								</div>
+							</div>
+						{/if}
 					</div>
 				</div>
 			</div>
