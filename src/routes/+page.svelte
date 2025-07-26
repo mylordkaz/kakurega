@@ -117,13 +117,14 @@
 	<section class="bg-primary py-16">
 		<div class="container mx-auto px-4">
 			<div class="bg-card-dark mx-auto max-w-4xl rounded-lg p-8">
-				<h2 class="text-card mb-6 text-3xl font-bold">こんな理想をお持ちではありませんか？</h2>
+				<h2 class="text-card mb-6 text-3xl font-bold">こんなお悩み、抱えていませんか？</h2>
 				<ul class="space-y-4 text-xl text-gray-100">
-					<li>• スタイリッシュで洗練された髪型にしたい</li>
-					<li>• 自分に似合うヘアスタイルを見つけたい</li>
-					<li>• プロフェッショナルな仕上がりを求めている</li>
-					<li>• 毎日のスタイリングが楽になる髪型にしたい</li>
-					<li>• 自信を持てる外見に変身したい</li>
+					<li>• 本当はやりたい髪型があるのに、薄毛が気になってオーダーしづらい</li>
+					<li>• 写真やSNSの投稿で、つい髪のボリュームを気にしてしまう</li>
+					<li>• 仕事や恋愛で、自信を持って人前に立てない</li>
+					<li>• 抜け毛が増えてきたが、なにから始めて良いかわからない</li>
+					<li>• 「もう何をしても変わらない」と諦めかけている</li>
+					<li>• 似合うヘアスタイルまで、一緒に提案してほしい。</li>
 				</ul>
 			</div>
 		</div>
@@ -137,7 +138,38 @@
 					理想の自分を叶える、<br />
 					KAKUREGAだけのアプローチ
 				</h2>
-				<p class="text-secondary text-center">（ここは説明文や画像を記載）</p>
+				<div class="text-secondary space-y-6">
+					<p class="text-center text-lg leading-relaxed">
+						"髪が生えるだけ"では、自信も理想の印象も取り戻せません。
+					</p>
+					<p class="text-center text-lg leading-relaxed">
+						KAKUREGAは、"最先端の発毛技術"とプロの理容師による"似合わせカット"を組み合わせた唯一無二のメンズ専門サロンです。
+					</p>
+					<div class="bg-card-dark rounded-lg p-6">
+						<h3 class="text-card mb-4 text-center text-xl font-bold">
+							《リアルな結果を追求したKAKUREGA　3つの特徴》
+						</h3>
+						<div class="space-y-4">
+							<h4 class="text-card text-lg font-semibold">
+								「リアルで結果を見せる！5日で新毛を確認可能」
+							</h4>
+							<p class="leading-relaxed text-gray-100">
+								プラズマにより眠っていた細胞を活性化させることで、毛根がないところへもアプローチし、毛根を再生復活させます。また、施術時は毎回スコープで確認するので、新毛が生えて伸びていく<span
+									class="text-card border-card border-b-2 font-semibold brightness-150"
+									>過程を見ながら実感</span
+								>いただけます。
+							</p>
+							<div class="mt-6 text-center">
+								<img
+									src="/approachImage.webp"
+									alt="KAKUREGA発毛技術の様子"
+									loading="lazy"
+									class="mx-auto h-auto max-w-full rounded-lg shadow-lg"
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -151,12 +183,18 @@
 				<!-- Menu Item -->
 				<div class="mb-8">
 					<div class="mb-4 flex items-center justify-between">
-						<h3 class="text-card text-2xl font-bold">プレミアムカット＆スタイリング</h3>
-						<span class="text-2xl font-bold text-gray-100">¥8,800</span>
+						<h3 class="text-card text-2xl font-bold">≪新毛保障体験≫　90分</h3>
+						<span class="text-2xl font-bold text-gray-100">￥16,500</span>
 					</div>
-					<p class="text-lg leading-relaxed text-gray-100">
-						経験豊富なスタイリストによる丁寧なカウンセリングから始まり、お客様の骨格や髪質を分析した上で最適なカットをご提案。シャンプー、カット、ブロー、スタイリングまで含まれた贅沢な体験をお楽しみください。
-					</p>
+					<div class="space-y-2 text-lg leading-relaxed text-gray-100">
+						<p>2週間分のホームケア商材付き</p>
+						<p>
+							7日で新毛が確認できなければ<span
+								class="text-card border-card border-b-2 font-semibold brightness-150 filter"
+								>全額返金保証</span
+							>
+						</p>
+					</div>
 				</div>
 
 				<!-- Reservation Button -->
@@ -193,7 +231,7 @@
 							on:click={() => toggleFaq(0)}
 						>
 							<span class="text-card pr-4 text-lg font-semibold">
-								予約はどのようにすればよいですか？
+								薄毛は遺伝だから諦めないといけない？
 							</span>
 							<svg
 								class="text-card h-6 w-6 flex-shrink-0 transition-transform duration-200 {openFaq ===
@@ -214,7 +252,8 @@
 						</button>
 						{#if openFaq === 0}
 							<div class="pb-4 leading-relaxed text-gray-100">
-								お電話、または当サイトのオンライン予約システムからご予約いただけます。初回のお客様は事前にカウンセリングのお時間を設けますので、余裕を持ってお時間をいただいております。キャンセルは前日までにお願いいたします。
+								→ いいえ。両親から受け継ぐのは、大部分が“体質”の遺伝です。<br
+								/>“体質”は改善することが可能です。
 							</div>
 						{/if}
 					</div>
@@ -226,7 +265,7 @@
 							on:click={() => toggleFaq(1)}
 						>
 							<span class="text-card pr-4 text-lg font-semibold">
-								施術時間はどのくらいかかりますか？
+								毛根が死んでいるともう生えない？
 							</span>
 							<svg
 								class="text-card h-6 w-6 flex-shrink-0 transition-transform duration-200 {openFaq ===
@@ -247,7 +286,7 @@
 						</button>
 						{#if openFaq === 1}
 							<div class="pb-4 leading-relaxed text-gray-100">
-								カットのみの場合は約60分、カット＆スタイリングは約90分を目安としております。初回のお客様はカウンセリング時間を含めて通常より30分程度長くお時間をいただく場合がございます。お急ぎの場合は予約時にお申し付けください。
+								→ いいえ。毛根は死んでいるのではなく、仮死状態なので、復活可能です。
 							</div>
 						{/if}
 					</div>
@@ -258,9 +297,7 @@
 							class="flex w-full items-center justify-between py-4 text-left focus:outline-none"
 							on:click={() => toggleFaq(2)}
 						>
-							<span class="text-card pr-4 text-lg font-semibold">
-								支払い方法は何が利用できますか？
-							</span>
+							<span class="text-card pr-4 text-lg font-semibold"> くせ毛は治らない？ </span>
 							<svg
 								class="text-card h-6 w-6 flex-shrink-0 transition-transform duration-200 {openFaq ===
 								2
@@ -280,8 +317,138 @@
 						</button>
 						{#if openFaq === 2}
 							<div class="pb-4 leading-relaxed text-gray-100">
-								現金、各種クレジットカード（VISA、MasterCard、JCB、AMEX）、電子マネー（交通系IC、QUICPay、iD）、QRコード決済（PayPay、LINE
-								Pay、楽天ペイ）に対応しております。事前決済をご希望の場合はご予約時にお申し付けください。
+								→ はい。くせ毛は頭皮内部の毛孔という部分の形で形成されます。<br
+								/>外側からの改善はできない部分です。
+							</div>
+						{/if}
+					</div>
+
+					<!-- FAQ Item 4 -->
+					<div class="border-b border-gray-600">
+						<button
+							class="flex w-full items-center justify-between py-4 text-left focus:outline-none"
+							on:click={() => toggleFaq(3)}
+						>
+							<span class="text-card pr-4 text-lg font-semibold"> 海藻類は髪に良い？ </span>
+							<svg
+								class="text-card h-6 w-6 flex-shrink-0 transition-transform duration-200 {openFaq ===
+								3
+									? 'rotate-180'
+									: ''}"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M19 9l-7 7-7-7"
+								/>
+							</svg>
+						</button>
+						{#if openFaq === 3}
+							<div class="pb-4 leading-relaxed text-gray-100">
+								→ はい。ミネラルが豊富なので、髪に必要な成分の一つです。
+							</div>
+						{/if}
+					</div>
+
+					<!-- FAQ Item 5 -->
+					<div class="border-b border-gray-600">
+						<button
+							class="flex w-full items-center justify-between py-4 text-left focus:outline-none"
+							on:click={() => toggleFaq(4)}
+						>
+							<span class="text-card pr-4 text-lg font-semibold"
+								>シャンプーは毎日した方が良い？</span
+							>
+							<svg
+								class="text-card h-6 w-6 flex-shrink-0 transition-transform duration-200 {openFaq ===
+								4
+									? 'rotate-180'
+									: ''}"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M19 9l-7 7-7-7"
+								/>
+							</svg>
+						</button>
+						{#if openFaq === 4}
+							<div class="pb-4 leading-relaxed text-gray-100">
+								→
+								はい。頭皮の皮脂量は顔の皮脂量の4倍分泌しています。毎日のシャンプーは毛根を健康に保つための重要な役割です。
+							</div>
+						{/if}
+					</div>
+
+					<!-- FAQ Item 6 -->
+					<div class="border-b border-gray-600">
+						<button
+							class="flex w-full items-center justify-between py-4 text-left focus:outline-none"
+							on:click={() => toggleFaq(5)}
+						>
+							<span class="text-card pr-4 text-lg font-semibold">朝シャンは髪に影響ある？</span>
+							<svg
+								class="text-card h-6 w-6 flex-shrink-0 transition-transform duration-200 {openFaq ===
+								5
+									? 'rotate-180'
+									: ''}"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M19 9l-7 7-7-7"
+								/>
+							</svg>
+						</button>
+						{#if openFaq === 5}
+							<div class="pb-4 leading-relaxed text-gray-100">
+								→
+								あります。一日の皮脂やフケ(垢と同じ)は夜にリセットすることで、豊かな毛量が保てます。
+							</div>
+						{/if}
+					</div>
+
+					<!-- FAQ Item 7 -->
+					<div class="border-b border-gray-600">
+						<button
+							class="flex w-full items-center justify-between py-4 text-left focus:outline-none"
+							on:click={() => toggleFaq(6)}
+						>
+							<span class="text-card pr-4 text-lg font-semibold"
+								>白髪の多い人は薄毛にならない？</span
+							>
+							<svg
+								class="text-card h-6 w-6 flex-shrink-0 transition-transform duration-200 {openFaq ===
+								6
+									? 'rotate-180'
+									: ''}"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M19 9l-7 7-7-7"
+								/>
+							</svg>
+						</button>
+						{#if openFaq === 6}
+							<div class="pb-4 leading-relaxed text-gray-100">
+								→ いいえ。薄毛と白髪の因果関係はありません。
 							</div>
 						{/if}
 					</div>
@@ -304,7 +471,7 @@
 					<div class="text-light flex h-full items-center justify-center text-sm">画像</div>
 				</div>
 				<p class="mx-auto max-w-2xl text-gray-100">
-					KAKUREGA代表の山田太郎です。15年の経験を活かし、お客様一人ひとりに最適なスタイルをご提案いたします。
+					はじめまして【KAKUREGA men's wellness lab】代表のオギワラ アツキです！
 				</p>
 			</div>
 		</div>
@@ -510,3 +677,4 @@
 		</svg>
 	</button>
 {/if}
+
