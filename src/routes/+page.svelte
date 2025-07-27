@@ -159,11 +159,13 @@
 									>過程を見ながら実感</span
 								>いただけます。
 							</p>
-							<div class="mt-6 text-center">
+							<div class="mt-12 text-center">
 								<img
 									src="/approachImage.webp"
 									alt="KAKUREGA発毛技術の様子"
 									loading="lazy"
+									width="400"
+									height="160"
 									class="mx-auto h-auto max-w-full rounded-lg shadow-lg"
 								/>
 							</div>
@@ -182,11 +184,12 @@
 
 				<!-- Menu Item -->
 				<div class="mb-8">
-					<div class="mb-4 flex items-center justify-between">
-						<h3 class="text-card text-2xl font-bold">≪新毛保障体験≫　90分</h3>
+					<div class=" flex items-center justify-between">
+						<h3 class="text-card text-2xl font-bold">≪新毛保障体験≫</h3>
 						<span class="text-2xl font-bold text-gray-100">￥16,500</span>
 					</div>
-					<div class="space-y-2 text-lg leading-relaxed text-gray-100">
+					<span class="text-card mt-2 text-xl font-bold">90分</span>
+					<div class="mt-4 space-y-2 text-lg leading-relaxed text-gray-100">
 						<p>2週間分のホームケア商材付き</p>
 						<p>
 							7日で新毛が確認できなければ<span
@@ -677,4 +680,3 @@
 		</svg>
 	</button>
 {/if}
-
