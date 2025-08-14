@@ -85,25 +85,15 @@
 	});
 </script>
 
-<main class="bg-primary min-h-screen pt-20">
-	<!-- Hero Section -->
-	<section class="bg-primary relative py-20">
-		<div class="container mx-auto px-4 text-center">
-			<h1 class="text-card text-4xl leading-relaxed font-bold md:text-5xl lg:text-6xl">
-				「髪を生やすことがゴールじゃない」<br />
-				髪を変えれば、人生が変わる。<br />
-				理想の自分を、この場所で。
-			</h1>
-		</div>
+<main class="bg-primary min-h-screen">
+	<!-- Main Image Section -->
+	<section class="w-full content-after-header">
+		<img src="image1.webp" alt="" class="w-full h-auto object-cover" />
 	</section>
 
-	<!-- Main Image Section -->
-	<section class="bg-primary py-16">
+	<!-- Reservation Button Section -->
+	<section class="bg-primary py-8">
 		<div class="container mx-auto px-4 text-center">
-			<div class="bg-card-dark mx-auto mb-8 h-96 w-full max-w-2xl rounded-lg">
-				<div class="text-light flex h-full items-center justify-center text-2xl">画像</div>
-			</div>
-
 			<a
 				href="/reservation"
 				class="bg-card text-primary inline-block rounded-full px-12 py-5 text-2xl font-bold transition-all hover:opacity-80"

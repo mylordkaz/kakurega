@@ -31,7 +31,7 @@
 
 <header
 	bind:this={headerElement}
-	class="bg-secondary border-primary fixed top-0 right-0 left-0 z-40 flex items-center justify-between border-b-2 px-6 shadow-md"
+	class="bg-secondary border-primary fixed top-0 right-0 left-0 z-40 flex items-center justify-between border-b-2 px-6 shadow-md h-28"
 >
 	<!-- Centered Logo -->
 	<div class="flex flex-1 justify-center">
