@@ -120,6 +120,42 @@
 		</div>
 	</section>
 
+	<!-- Previous Hair Loss Treatments Section -->
+	<section class="bg-primary py-16">
+		<div class="container mx-auto px-4">
+			<div class="card-primary mx-auto max-w-4xl rounded-lg p-8">
+				<h2 class="text-primary mb-6 text-center text-3xl font-bold">
+					今までの薄毛対策　メリットとデメリット
+				</h2>
+				<div class="space-y-8">
+					<p class="text-secondary text-lg leading-relaxed text-center">
+						今までの薄毛対策は、内服薬や外用薬の使用が一般的でした。<br />
+						当店で使用する最先端科学のエステティックプラズマによる施術は、<br />
+						薬・サプリメントを使用しないので、副作用が一切ありません。
+					</p>
+					
+					<div class="text-center">
+						<img
+							src="/table.webp"
+							alt="薄毛対策比較表"
+							loading="lazy"
+							class="mx-auto h-auto w-full max-w-5xl shadow-lg"
+						/>
+					</div>
+					
+					<div class="bg-card-dark rounded-lg p-6">
+						<p class="text-white text-lg leading-relaxed text-center">
+							<span class="text-card border-card border-b-2 font-semibold brightness-150">薬・サプリメントは一切不使用</span><br />
+							KAKUREGA men's wellness labは、<span class="text-card border-card border-b-2 font-semibold brightness-150">"最先端の発毛技術"</span>と<br />
+							現役理容師による<span class="text-card border-card border-b-2 font-semibold brightness-150">"似合わせカット"</span>を組み合わせた<br />
+							唯一無二のメンズ専門サロンです。
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
 	<!-- KAKUREGA Approach Section -->
 	<section class="bg-primary py-16">
 		<div class="container mx-auto px-4">
