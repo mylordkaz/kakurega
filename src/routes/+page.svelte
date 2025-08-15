@@ -370,7 +370,7 @@
 							on:click={() => toggleFaq(0)}
 						>
 							<span class="text-card pr-4 text-lg font-semibold">
-								薄毛は遺伝だから諦めないといけない？
+								本当に効果はありますか？ どれくらいで実感できますか？
 							</span>
 							<svg
 								class="text-card h-6 w-6 flex-shrink-0 transition-transform duration-200 {openFaq ===
@@ -391,8 +391,7 @@
 						</button>
 						{#if openFaq === 0}
 							<div class="pb-4 leading-relaxed text-gray-100">
-								→ いいえ。両親から受け継ぐのは、大部分が“体質”の遺伝です。<br
-								/>“体質”は改善することが可能です。
+								初回の密度＆毛根診断の結果をもとに、どの程度の効果が見込めるのかを具体的にお伝えさせていただいております。施術によって生えてきた新毛は、5～7日で確認が可能です。
 							</div>
 						{/if}
 					</div>
@@ -404,7 +403,7 @@
 							on:click={() => toggleFaq(1)}
 						>
 							<span class="text-card pr-4 text-lg font-semibold">
-								毛根が死んでいるともう生えない？
+								初回体験だけでも大丈夫ですか？ 押し売りはありませんか？
 							</span>
 							<svg
 								class="text-card h-6 w-6 flex-shrink-0 transition-transform duration-200 {openFaq ===
@@ -425,7 +424,7 @@
 						</button>
 						{#if openFaq === 1}
 							<div class="pb-4 leading-relaxed text-gray-100">
-								→ いいえ。毛根は死んでいるのではなく、仮死状態なので、復活可能です。
+								もちろん初回体験のみでも大歓迎です。改善のためのアドバイスはお伝えさせていただいておりますが、無理な押し売りは一切行っておりませんのでご安心ください。
 							</div>
 						{/if}
 					</div>
@@ -436,7 +435,7 @@
 							class="flex w-full items-center justify-between py-4 text-left focus:outline-none"
 							on:click={() => toggleFaq(2)}
 						>
-							<span class="text-card pr-4 text-lg font-semibold"> くせ毛は治らない？ </span>
+							<span class="text-card pr-4 text-lg font-semibold">料金はどれくらいかかりますか？</span>
 							<svg
 								class="text-card h-6 w-6 flex-shrink-0 transition-transform duration-200 {openFaq ===
 								2
@@ -456,8 +455,7 @@
 						</button>
 						{#if openFaq === 2}
 							<div class="pb-4 leading-relaxed text-gray-100">
-								→ はい。くせ毛は頭皮内部の毛孔という部分の形で形成されます。<br
-								/>外側からの改善はできない部分です。
+								メニューページに記載がございますので、そちらをご確認ください。
 							</div>
 						{/if}
 					</div>
@@ -468,7 +466,7 @@
 							class="flex w-full items-center justify-between py-4 text-left focus:outline-none"
 							on:click={() => toggleFaq(3)}
 						>
-							<span class="text-card pr-4 text-lg font-semibold"> 海藻類は髪に良い？ </span>
+							<span class="text-card pr-4 text-lg font-semibold">支払い方法は何がありますか？ 分割払い・クレジット払いは可能ですか？</span>
 							<svg
 								class="text-card h-6 w-6 flex-shrink-0 transition-transform duration-200 {openFaq ===
 								3
@@ -488,7 +486,7 @@
 						</button>
 						{#if openFaq === 3}
 							<div class="pb-4 leading-relaxed text-gray-100">
-								→ はい。ミネラルが豊富なので、髪に必要な成分の一つです。
+								現金、クレジットカード、分割払いに対応しています。
 							</div>
 						{/if}
 					</div>
@@ -499,9 +497,7 @@
 							class="flex w-full items-center justify-between py-4 text-left focus:outline-none"
 							on:click={() => toggleFaq(4)}
 						>
-							<span class="text-card pr-4 text-lg font-semibold"
-								>シャンプーは毎日した方が良い？</span
-							>
+							<span class="text-card pr-4 text-lg font-semibold">他の発毛サロンとの違いは何ですか？</span>
 							<svg
 								class="text-card h-6 w-6 flex-shrink-0 transition-transform duration-200 {openFaq ===
 								4
@@ -521,8 +517,7 @@
 						</button>
 						{#if openFaq === 4}
 							<div class="pb-4 leading-relaxed text-gray-100">
-								→
-								はい。頭皮の皮脂量は顔の皮脂量の4倍分泌しています。毎日のシャンプーは毛根を健康に保つための重要な役割です。
+								効果をリアルに見ながらご体感いただけることと、現役理容師によるヘアスタイルと合わせたご提案をできることが最大の特徴です。
 							</div>
 						{/if}
 					</div>
@@ -533,7 +528,7 @@
 							class="flex w-full items-center justify-between py-4 text-left focus:outline-none"
 							on:click={() => toggleFaq(5)}
 						>
-							<span class="text-card pr-4 text-lg font-semibold">朝シャンは髪に影響ある？</span>
+							<span class="text-card pr-4 text-lg font-semibold">副作用やリスクはありますか？</span>
 							<svg
 								class="text-card h-6 w-6 flex-shrink-0 transition-transform duration-200 {openFaq ===
 								5
@@ -553,8 +548,7 @@
 						</button>
 						{#if openFaq === 5}
 							<div class="pb-4 leading-relaxed text-gray-100">
-								→
-								あります。一日の皮脂やフケ(垢と同じ)は夜にリセットすることで、豊かな毛量が保てます。
+								薬やサプリメントを一切使用しなので副作用はございません。施術に使う機器は医療用メスと同じ素材を使用しているので、金属アレルギーの方でもご利用いただけます。
 							</div>
 						{/if}
 					</div>
@@ -565,9 +559,7 @@
 							class="flex w-full items-center justify-between py-4 text-left focus:outline-none"
 							on:click={() => toggleFaq(6)}
 						>
-							<span class="text-card pr-4 text-lg font-semibold"
-								>白髪の多い人は薄毛にならない？</span
-							>
+							<span class="text-card pr-4 text-lg font-semibold">カットやスタイリングも同時にお願いできますか？</span>
 							<svg
 								class="text-card h-6 w-6 flex-shrink-0 transition-transform duration-200 {openFaq ===
 								6
@@ -587,7 +579,100 @@
 						</button>
 						{#if openFaq === 6}
 							<div class="pb-4 leading-relaxed text-gray-100">
-								→ いいえ。薄毛と白髪の因果関係はありません。
+								もちろんです。当店はバーバーサロン内に併設しており、現役の理容師がカウンセリングから施術までマンツーマンでご対応いたします。
+							</div>
+						{/if}
+					</div>
+
+					<!-- FAQ Item 8 -->
+					<div class="border-b border-gray-600">
+						<button
+							class="flex w-full items-center justify-between py-4 text-left focus:outline-none"
+							on:click={() => toggleFaq(7)}
+						>
+							<span class="text-card pr-4 text-lg font-semibold">予約は必要ですか？ 当日予約は可能ですか？</span>
+							<svg
+								class="text-card h-6 w-6 flex-shrink-0 transition-transform duration-200 {openFaq ===
+								7
+									? 'rotate-180'
+									: ''}"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M19 9l-7 7-7-7"
+								/>
+							</svg>
+						</button>
+						{#if openFaq === 7}
+							<div class="pb-4 leading-relaxed text-gray-100">
+								密度＆毛根診断は事前のご予約が必須となります。カット＋お悩みのご相談に関しましては、当日のご予約も可能です。ご予約枠に限りがございますので、お早めのご予約がおすすめです。
+							</div>
+						{/if}
+					</div>
+
+					<!-- FAQ Item 9 -->
+					<div class="border-b border-gray-600">
+						<button
+							class="flex w-full items-center justify-between py-4 text-left focus:outline-none"
+							on:click={() => toggleFaq(8)}
+						>
+							<span class="text-card pr-4 text-lg font-semibold">他のお客さんに会いたくないのですが、プライバシーは守られますか？</span>
+							<svg
+								class="text-card h-6 w-6 flex-shrink-0 transition-transform duration-200 {openFaq ===
+								8
+									? 'rotate-180'
+									: ''}"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M19 9l-7 7-7-7"
+								/>
+							</svg>
+						</button>
+						{#if openFaq === 8}
+							<div class="pb-4 leading-relaxed text-gray-100">
+								施術中は半個室になりますので、他のお客様から見られることはございません。入退店時も他のお客様にお会いされたくない場合は、個別対応も行っておりますので、お気軽にご相談ください。
+							</div>
+						{/if}
+					</div>
+
+					<!-- FAQ Item 10 -->
+					<div class="border-b border-gray-600">
+						<button
+							class="flex w-full items-center justify-between py-4 text-left focus:outline-none"
+							on:click={() => toggleFaq(9)}
+						>
+							<span class="text-card pr-4 text-lg font-semibold">どんな人が担当しますか？ 専門家や理容師の実績は？</span>
+							<svg
+								class="text-card h-6 w-6 flex-shrink-0 transition-transform duration-200 {openFaq ===
+								9
+									? 'rotate-180'
+									: ''}"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M19 9l-7 7-7-7"
+								/>
+							</svg>
+						</button>
+						{#if openFaq === 9}
+							<div class="pb-4 leading-relaxed text-gray-100">
+								代表のオギワラは、毎月200名以上の男性を担当している現役理容師であり、これまでに延べ3万人近くの頭皮を診てきた専門家のサポートも受けながら、お客様一人ひとりに根拠のあるアドバイスと丁寧なケアを行っています。
 							</div>
 						{/if}
 					</div>
