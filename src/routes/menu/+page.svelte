@@ -42,9 +42,9 @@
 						どんなことでもお気軽にご相談ください。
 					</p>
 					<div class="text-center mt-8">
-						<a href="https://lin.ee/741xg1I" class="inline-flex items-center space-x-3 bg-card text-primary font-bold py-4 px-8 rounded-full transition-all hover:opacity-80" aria-label="LINE問い合わせ">
-							<img src="/icons/line.svg" alt="LINE" class="h-8 w-8" />
-							<span class="text-xl">LINEで問い合わせる</span>
+						<a href="https://lin.ee/741xg1I" class="inline-flex items-center space-x-2 bg-card text-primary font-bold py-3 px-6 rounded-full transition-all hover:opacity-80" aria-label="LINE問い合わせ">
+							<img src="/icons/line.svg" alt="LINE" class="h-6 w-6" />
+							<span class="text-lg">LINEで問い合わせる</span>
 						</a>
 					</div>
 				</div>

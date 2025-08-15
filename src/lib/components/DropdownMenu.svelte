@@ -24,13 +24,13 @@
 
 {#if isMenuOpen}
 	<!-- Dropdown Menu -->
-	<div class="bg-card-dark absolute top-full right-0 z-50 mt-2 w-72 rounded-l-lg shadow-2xl">
-		<nav class="py-6">
-			<ul class="space-y-2">
+	<div class="bg-card-dark absolute top-full right-0 z-50 mt-2 w-64 rounded-l-lg shadow-2xl">
+		<nav class="py-3">
+			<ul class="space-y-1">
 				<li>
 					<button
 						on:click={() => handleNavClick('link', '/')}
-						class="text-card hover:bg-primary hover:text-light w-full px-10 py-6 text-left text-2xl font-semibold transition-colors"
+						class="text-card hover:bg-primary hover:text-light w-full px-6 py-3 text-left text-lg font-semibold transition-colors"
 					>
 						ホーム
 					</button>
@@ -38,7 +38,7 @@
 				<li>
 					<button
 						on:click={() => handleNavClick('link', '/menu')}
-						class="text-card hover:bg-primary hover:text-light w-full px-10 py-6 text-left text-2xl font-semibold transition-colors"
+						class="text-card hover:bg-primary hover:text-light w-full px-6 py-3 text-left text-lg font-semibold transition-colors"
 					>
 						メニュー
 					</button>
@@ -46,7 +46,7 @@
 				<li>
 					<button
 						on:click={() => handleNavClick('link', '/reservation')}
-						class="text-card hover:bg-primary hover:text-light w-full px-10 py-6 text-left text-2xl font-semibold transition-colors"
+						class="text-card hover:bg-primary hover:text-light w-full px-6 py-3 text-left text-lg font-semibold transition-colors"
 					>
 						予約・お問い合わせ
 					</button>
@@ -54,7 +54,7 @@
 				<li>
 					<button
 						on:click={() => handleNavClick('scroll', 'faq')}
-						class="text-card hover:bg-primary hover:text-light w-full px-10 py-6 text-left text-2xl font-semibold transition-colors"
+						class="text-card hover:bg-primary hover:text-light w-full px-6 py-3 text-left text-lg font-semibold transition-colors"
 					>
 						よくある質問
 					</button>
@@ -62,7 +62,7 @@
 				<li>
 					<button
 						on:click={() => handleNavClick('link', '/blog')}
-						class="text-card hover:bg-primary hover:text-light w-full px-10 py-6 text-left text-2xl font-semibold transition-colors"
+						class="text-card hover:bg-primary hover:text-light w-full px-6 py-3 text-left text-lg font-semibold transition-colors"
 					>
 						ブログ
 					</button>
@@ -70,7 +70,7 @@
 				<li>
 					<button
 						on:click={() => handleNavClick('scroll', 'access')}
-						class="text-card hover:bg-primary hover:text-light w-full px-10 py-6 text-left text-2xl font-semibold transition-colors"
+						class="text-card hover:bg-primary hover:text-light w-full px-6 py-3 text-left text-lg font-semibold transition-colors"
 					>
 						アクセス
 					</button>
@@ -78,7 +78,7 @@
 				<li>
 					<button
 						on:click={() => handleNavClick('link', '/about')}
-						class="text-card hover:bg-primary hover:text-light w-full px-10 py-6 text-left text-2xl font-semibold transition-colors"
+						class="text-card hover:bg-primary hover:text-light w-full px-6 py-3 text-left text-lg font-semibold transition-colors"
 					>
 						自己紹介
 					</button>

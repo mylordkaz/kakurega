@@ -18,9 +18,9 @@
 	<meta name="description" content="KAKUREGAのブログ記事一覧" />
 </svelte:head>
 
-<main class="bg-primary min-h-screen pt-20">
+<main class="bg-primary min-h-screen">
 	<!-- Title -->
-	<section class="bg-primary pt-32 pb-10">
+	<section class="bg-primary content-after-header pt-16 pb-10">
 		<div class="container mx-auto px-6 text-center">
 			<h1 class="text-card text-4xl font-bold md:text-5xl lg:text-6xl">ブログ</h1>
 		</div>

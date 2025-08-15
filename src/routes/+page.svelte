@@ -321,9 +321,9 @@
 						「一つでも当てはまった方、まずは密度＆毛根診断からお試しください。」
 					</p>
 					<div>
-						<a href="https://lin.ee/741xg1I" class="inline-flex items-center space-x-3 bg-card text-primary font-bold py-4 px-8 rounded-full transition-all hover:opacity-80" aria-label="LINE診断">
-							<img src="/icons/line.svg" alt="LINE" class="h-8 w-8" />
-							<span class="text-xl">初回診断の詳細はこちら</span>
+						<a href="https://lin.ee/741xg1I" class="inline-flex items-center space-x-2 bg-card text-primary font-bold py-3 px-6 rounded-full transition-all hover:opacity-80" aria-label="LINE診断">
+							<img src="/icons/line.svg" alt="LINE" class="h-6 w-6" />
+							<span class="text-lg">初回診断の詳細はこちら</span>
 						</a>
 					</div>
 				</div>
@@ -727,9 +727,9 @@
 	<section class="bg-primary py-16">
 		<div class="container mx-auto px-4">
 			<div class="bg-card-dark mx-auto max-w-4xl rounded-lg p-8">
-				<div class="mb-8 flex items-center justify-between">
-					<h2 class="text-card text-3xl font-bold">ブログの最新記事</h2>
-					<a href="/blog" class="text-card text-sm underline transition-colors hover:text-gray-100">
+				<div class="mb-8 flex items-center justify-between flex-wrap gap-4">
+					<h2 class="text-card text-2xl md:text-3xl font-bold">ブログの最新記事</h2>
+					<a href="/blog" class="text-card text-xs md:text-sm underline transition-colors hover:text-gray-100 whitespace-nowrap">
 						すべての記事を見る
 					</a>
 				</div>
