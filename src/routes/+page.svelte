@@ -122,8 +122,8 @@
 
 	<!-- Previous Hair Loss Treatments Section -->
 	<section class="bg-primary py-16">
-		<div class="container mx-auto px-4">
-			<div class="card-primary mx-auto max-w-4xl rounded-lg p-8">
+		<div class="container mx-auto px-1">
+			<div class="card-primary mx-auto max-w-4xl rounded-lg p-4 md:p-8">
 				<h2 class="text-primary mb-6 text-center text-3xl font-bold">
 					今までの薄毛対策　メリットとデメリット
 				</h2>
@@ -166,8 +166,8 @@
 
 	<!-- KAKUREGA Approach Section -->
 	<section class="bg-primary py-16">
-		<div class="container mx-auto px-4">
-			<div class="card-primary mx-auto max-w-4xl rounded-lg p-8">
+		<div class="container mx-auto px-1">
+			<div class="card-primary mx-auto max-w-4xl rounded-lg p-4 md:p-8">
 				<h2 class="text-primary mb-4 text-center text-2xl font-bold">
 					理想の自分を叶える、<br />
 					KAKUREGAだけのアプローチ
@@ -333,8 +333,8 @@
 
 	<!-- First Experience Menu Section -->
 	<section class="bg-primary py-16">
-		<div class="container mx-auto px-4">
-			<div class="bg-card-dark mx-auto max-w-4xl rounded-lg p-8">
+		<div class="container mx-auto px-1">
+			<div class="bg-card-dark mx-auto max-w-4xl rounded-lg p-4 md:p-8">
 				<h2 class="text-card mb-8 text-center text-3xl font-bold">初回体験メニュー</h2>
 
 				<div class="text-center space-y-8">
