@@ -321,9 +321,9 @@
 						「一つでも当てはまった方、まずは密度＆毛根診断からお試しください。」
 					</p>
 					<div>
-						<p class="text-gray-100 text-lg mb-4">初回診断の詳細はこちら</p>
-						<a href="https://lin.ee/741xg1I" class="transition-all hover:scale-110" aria-label="LINE">
-							<img src="/icons/line.svg" alt="LINE" class="h-20 w-20 mx-auto" />
+						<a href="https://lin.ee/741xg1I" class="inline-flex items-center space-x-3 bg-card text-primary font-bold py-4 px-8 rounded-full transition-all hover:opacity-80" aria-label="LINE診断">
+							<img src="/icons/line.svg" alt="LINE" class="h-8 w-8" />
+							<span class="text-xl">初回診断の詳細はこちら</span>
 						</a>
 					</div>
 				</div>
@@ -334,42 +334,23 @@
 	<!-- First Experience Menu Section -->
 	<section class="bg-primary py-16">
 		<div class="container mx-auto px-4">
-			<div class="bg-card-dark relative mx-auto max-w-4xl rounded-lg p-8">
+			<div class="bg-card-dark mx-auto max-w-4xl rounded-lg p-8">
 				<h2 class="text-card mb-8 text-center text-3xl font-bold">初回体験メニュー</h2>
 
-				<!-- Menu Item -->
-				<div class="mb-8">
-					<div class=" flex items-center justify-between">
-						<h3 class="text-card text-2xl font-bold">≪新毛保障体験≫</h3>
-						<span class="text-2xl font-bold text-gray-100">￥16,500</span>
+				<div class="text-center space-y-8">
+					<img
+						src="/firstExpImage.webp"
+						alt="初回体験メニュー"
+						loading="lazy"
+						class="mx-auto h-auto max-w-full rounded-lg shadow-lg"
+					/>
+					
+					<div>
+						<a href="https://lin.ee/741xg1I" class="inline-flex items-center space-x-3 bg-card text-primary font-bold py-4 px-8 rounded-full transition-all hover:opacity-80" aria-label="LINE診断">
+							<img src="/icons/line.svg" alt="LINE" class="h-8 w-8" />
+							<span class="text-xl">今すぐ診断する</span>
+						</a>
 					</div>
-					<span class="text-card mt-2 text-xl font-bold">90分</span>
-					<div class="mt-4 space-y-2 text-lg leading-relaxed text-gray-100">
-						<p>2週間分のホームケア商材付き</p>
-						<p>
-							7日で新毛が確認できなければ<span
-								class="text-card border-card border-b-2 font-semibold brightness-150 filter"
-								>全額返金保証</span
-							>
-						</p>
-					</div>
-				</div>
-
-				<!-- Reservation Button -->
-				<div class="mb-6 text-center">
-					<a
-						href="/reservation"
-						class="bg-card text-primary inline-block rounded-full px-12 py-5 text-2xl font-bold transition-all hover:opacity-80"
-					>
-						ご予約はこちら
-					</a>
-				</div>
-
-				<!-- Menu Link Button -->
-				<div class="absolute right-4 bottom-4">
-					<a href="/menu" class="text-card text-sm underline transition-colors hover:text-gray-100">
-						完全なメニューはこちら
-					</a>
 				</div>
 			</div>
 		</div>
