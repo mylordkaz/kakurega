@@ -691,12 +691,11 @@
 				>
 					自己紹介
 				</a>
-				<div class="bg-card-dark mx-auto mb-4 h-32 w-32 rounded-full">
-					<div class="text-light flex h-full items-center justify-center text-sm">画像</div>
+				<div class="mx-auto h-40 w-40">
+					<a href="/about" class="block transition-all hover:scale-105">
+						<img src="/owner.webp" alt="代表オギワラ アツキ" class="h-full w-full rounded-full object-cover" />
+					</a>
 				</div>
-				<p class="mx-auto max-w-2xl text-gray-100">
-					はじめまして【KAKUREGA men's wellness lab】代表のオギワラ アツキです！
-				</p>
 			</div>
 		</div>
 	</section>
