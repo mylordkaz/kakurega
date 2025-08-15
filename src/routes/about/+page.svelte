@@ -20,7 +20,7 @@
 	<!-- Description -->
 	<section class="bg-primary pb-24">
 		<div class="container mx-auto px-6">
-			<div class="bg-card-dark mx-auto max-w-4xl rounded-lg p-12 shadow-2xl">
+			<div class="bg-card-dark mx-auto max-w-4xl rounded-lg p-8 shadow-2xl">
 				<div class="space-y-6 text-lg leading-relaxed text-gray-100">
 					<p>
 						はじめまして。【KAKUREGA men's wellness lab】代表のオギワラ　アツキです。<br />
@@ -83,8 +83,8 @@
 					<div class="rounded-lg bg-gray-800 p-6">
 						<ul class="space-y-2 text-gray-100">
 							<li>しっかりとヘアデザインできる強い髪を育てるので、成果を実感できること。</li>
-							<li>無駄な時間とコストをかけず、<br />一生続けなくて良いこと。</li>
-							<li>圧倒的知識量を持つ多くの専門家と<br />最先端化学の融合により、<br />なぜそれを使うの？<br />どうしてそれが必要なの？<br />など、全てを言語化できること。</li>
+							<li><span class="no-break">無駄な時間とコストをかけず、</span><br />一生続けなくて良いこと。</li>
+							<li>圧倒的知識量を持つ<span class="no-break">多くの</span><br />専門家と最先端科学の融合により、<br />なぜそれを使うの？<br /><span class="no-break">どうしてそれが必要なの？</span><br />など、全てを言語化できること。</li>
 						</ul>
 					</div>
 

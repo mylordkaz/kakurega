@@ -153,7 +153,7 @@
 								>"最先端の発毛技術"</span
 							>と<br />
 							現役理容師による<span
-								class="text-card border-card border-b-2 font-semibold brightness-150"
+								class="text-card border-card no-break border-b-2 font-semibold brightness-150"
 								>"似合わせカット"</span
 							>を組み合わせた<br />
 							唯一無二のメンズ専門サロンです。
@@ -177,7 +177,9 @@
 						"髪が生えるだけ"では、自信も理想の印象も取り戻せません。
 					</p>
 					<p class="text-center text-lg leading-relaxed">
-						KAKUREGAは、"最先端の発毛技術"とプロの理容師による"似合わせカット"を組み合わせた唯一無二のメンズ専門サロンです。
+						KAKUREGAは、"最先端の発毛技術"とプロの理容師による<span class="no-break"
+							>"似合わせカット"</span
+						>を組み合わせた唯一無二のメンズ専門サロンです。
 					</p>
 					<div class="bg-card-dark rounded-lg p-6">
 						<h3 class="text-card mb-4 text-center text-xl font-bold">
@@ -290,7 +292,7 @@
 							<div class="mt-8">
 								<p class="text-card text-center text-lg leading-relaxed font-semibold">
 									「あなたが本当に手に入れたいのは、"生える髪"ではなく、<span
-										class="border-card border-b-2 brightness-150">"似合う髪"</span
+										class="border-card no-break border-b-2 brightness-150">"似合う髪"</span
 									> ではありませんか？」
 								</p>
 							</div>
@@ -306,8 +308,8 @@
 		<div class="container mx-auto px-4">
 			<div class="bg-card-dark mx-auto max-w-4xl rounded-lg p-8">
 				<h2 class="text-card mb-8 text-center text-3xl font-bold">こんな方にお勧めです</h2>
-				
-				<ul class="space-y-4 text-lg text-gray-100 mb-8">
+
+				<ul class="mb-8 space-y-4 text-lg text-gray-100">
 					<li>・本当は挑戦したい髪型があるのに、選択肢が狭くなったと感じている方</li>
 					<li>・理美容室で髪型のオーダーをしづらくなった方</li>
 					<li>・仕事や恋愛で第一印象をもっと良くしたいと思っている方</li>
@@ -315,17 +317,11 @@
 					<li>・薬やサプリに頼らず、自分の髪を取り戻したい方</li>
 					<li>・年齢を重ねても清潔感のあるヘアスタイルを維持し続けたい方</li>
 				</ul>
-				
-				<div class="text-center space-y-6">
+
+				<div class="space-y-6 text-center">
 					<p class="text-card text-xl font-semibold">
 						「一つでも当てはまった方、まずは密度＆毛根診断からお試しください。」
 					</p>
-					<div>
-						<a href="https://lin.ee/741xg1I" class="inline-flex items-center space-x-2 bg-card text-primary font-bold py-3 px-6 rounded-full transition-all hover:opacity-80" aria-label="LINE診断">
-							<img src="/icons/line.svg" alt="LINE" class="h-6 w-6" />
-							<span class="text-lg">初回診断の詳細はこちら</span>
-						</a>
-					</div>
 				</div>
 			</div>
 		</div>
@@ -337,16 +333,20 @@
 			<div class="bg-card-dark mx-auto max-w-4xl rounded-lg p-4 md:p-8">
 				<h2 class="text-card mb-8 text-center text-3xl font-bold">初回体験メニュー</h2>
 
-				<div class="text-center space-y-8">
+				<div class="space-y-8 text-center">
 					<img
 						src="/firstExpImage.webp"
 						alt="初回体験メニュー"
 						loading="lazy"
 						class="mx-auto h-auto max-w-full rounded-lg shadow-lg"
 					/>
-					
+
 					<div>
-						<a href="https://lin.ee/741xg1I" class="inline-flex items-center space-x-3 bg-card text-primary font-bold py-4 px-8 rounded-full transition-all hover:opacity-80" aria-label="LINE診断">
+						<a
+							href="https://lin.ee/741xg1I"
+							class="bg-card text-primary inline-flex items-center space-x-3 rounded-full px-8 py-4 font-bold transition-all hover:opacity-80"
+							aria-label="LINE診断"
+						>
 							<img src="/icons/line.svg" alt="LINE" class="h-8 w-8" />
 							<span class="text-xl">今すぐ診断する</span>
 						</a>
@@ -435,7 +435,9 @@
 							class="flex w-full items-center justify-between py-4 text-left focus:outline-none"
 							on:click={() => toggleFaq(2)}
 						>
-							<span class="text-card pr-4 text-lg font-semibold">料金はどれくらいかかりますか？</span>
+							<span class="text-card pr-4 text-lg font-semibold"
+								>料金はどれくらいかかりますか？</span
+							>
 							<svg
 								class="text-card h-6 w-6 flex-shrink-0 transition-transform duration-200 {openFaq ===
 								2
@@ -466,7 +468,9 @@
 							class="flex w-full items-center justify-between py-4 text-left focus:outline-none"
 							on:click={() => toggleFaq(3)}
 						>
-							<span class="text-card pr-4 text-lg font-semibold">支払い方法は何がありますか？ 分割払い・クレジット払いは可能ですか？</span>
+							<span class="text-card pr-4 text-lg font-semibold"
+								>支払い方法は何がありますか？ 分割払い・クレジット払いは可能ですか？</span
+							>
 							<svg
 								class="text-card h-6 w-6 flex-shrink-0 transition-transform duration-200 {openFaq ===
 								3
@@ -497,7 +501,9 @@
 							class="flex w-full items-center justify-between py-4 text-left focus:outline-none"
 							on:click={() => toggleFaq(4)}
 						>
-							<span class="text-card pr-4 text-lg font-semibold">他の発毛サロンとの違いは何ですか？</span>
+							<span class="text-card pr-4 text-lg font-semibold"
+								>他の発毛サロンとの違いは何ですか？</span
+							>
 							<svg
 								class="text-card h-6 w-6 flex-shrink-0 transition-transform duration-200 {openFaq ===
 								4
@@ -559,7 +565,9 @@
 							class="flex w-full items-center justify-between py-4 text-left focus:outline-none"
 							on:click={() => toggleFaq(6)}
 						>
-							<span class="text-card pr-4 text-lg font-semibold">カットやスタイリングも同時にお願いできますか？</span>
+							<span class="text-card pr-4 text-lg font-semibold"
+								>カットやスタイリングも同時にお願いできますか？</span
+							>
 							<svg
 								class="text-card h-6 w-6 flex-shrink-0 transition-transform duration-200 {openFaq ===
 								6
@@ -590,7 +598,9 @@
 							class="flex w-full items-center justify-between py-4 text-left focus:outline-none"
 							on:click={() => toggleFaq(7)}
 						>
-							<span class="text-card pr-4 text-lg font-semibold">予約は必要ですか？ 当日予約は可能ですか？</span>
+							<span class="text-card pr-4 text-lg font-semibold"
+								>予約は必要ですか？ 当日予約は可能ですか？</span
+							>
 							<svg
 								class="text-card h-6 w-6 flex-shrink-0 transition-transform duration-200 {openFaq ===
 								7
@@ -621,7 +631,9 @@
 							class="flex w-full items-center justify-between py-4 text-left focus:outline-none"
 							on:click={() => toggleFaq(8)}
 						>
-							<span class="text-card pr-4 text-lg font-semibold">他のお客さんに会いたくないのですが、プライバシーは守られますか？</span>
+							<span class="text-card pr-4 text-lg font-semibold"
+								>他のお客さんに会いたくないのですが、プライバシーは守られますか？</span
+							>
 							<svg
 								class="text-card h-6 w-6 flex-shrink-0 transition-transform duration-200 {openFaq ===
 								8
@@ -652,7 +664,9 @@
 							class="flex w-full items-center justify-between py-4 text-left focus:outline-none"
 							on:click={() => toggleFaq(9)}
 						>
-							<span class="text-card pr-4 text-lg font-semibold">どんな人が担当しますか？ 専門家や理容師の実績は？</span>
+							<span class="text-card pr-4 text-lg font-semibold"
+								>どんな人が担当しますか？ 専門家や理容師の実績は？</span
+							>
 							<svg
 								class="text-card h-6 w-6 flex-shrink-0 transition-transform duration-200 {openFaq ===
 								9
@@ -693,7 +707,11 @@
 				</a>
 				<div class="mx-auto h-40 w-40">
 					<a href="/about" class="block transition-all hover:scale-105">
-						<img src="/owner.webp" alt="代表オギワラ アツキ" class="h-full w-full rounded-full object-cover" />
+						<img
+							src="/owner.webp"
+							alt="代表オギワラ アツキ"
+							class="h-full w-full rounded-full object-cover"
+						/>
 					</a>
 				</div>
 			</div>
@@ -727,9 +745,12 @@
 	<section class="bg-primary py-16">
 		<div class="container mx-auto px-4">
 			<div class="bg-card-dark mx-auto max-w-4xl rounded-lg p-8">
-				<div class="mb-8 flex items-center justify-between flex-wrap gap-4">
-					<h2 class="text-card text-2xl md:text-3xl font-bold">ブログの最新記事</h2>
-					<a href="/blog" class="text-card text-xs md:text-sm underline transition-colors hover:text-gray-100 whitespace-nowrap">
+				<div class="mb-8 flex flex-wrap items-center justify-between gap-4">
+					<h2 class="text-card text-2xl font-bold md:text-3xl">ブログの最新記事</h2>
+					<a
+						href="/blog"
+						class="text-card text-xs whitespace-nowrap underline transition-colors hover:text-gray-100 md:text-sm"
+					>
 						すべての記事を見る
 					</a>
 				</div>
@@ -804,7 +825,7 @@
 					<!-- Location Info -->
 					<div class="space-y-4">
 						<div>
-							<h3 class="text-card mb-2 text-xl font-bold">KAKUREGA-LAB</h3>
+							<h3 class="text-card mb-2 text-lg font-bold">KAKUREGA men's wellness lab</h3>
 							<div class="space-y-2 text-gray-100">
 								<p>〒194-0013</p>
 								<p>東京都町田市原町田１丁目１４−４</p>
@@ -818,17 +839,14 @@
 							<div class="space-y-1 text-gray-100">
 								<p>• JR横浜線「町田駅」徒歩3分</p>
 								<p>• 小田急線「町田駅」徒歩5分</p>
-								<p>• 新宿駅から小田急線で約30分</p>
-								<p>• 横浜駅からJR横浜線で約30分</p>
 							</div>
 						</div>
 
 						<div>
 							<h4 class="text-card mb-2 text-lg font-semibold">営業時間</h4>
 							<div class="space-y-1 text-gray-100">
-								<p>月・水〜日：10:00 - 20:00</p>
-								<p>火曜日：10:00 - 14:00</p>
-								<p class="text-sm text-gray-400">年中無休</p>
+								<p>月〜日：10:00 - 20:00</p>
+								<p class="text-sm text-gray-400">不定休</p>
 							</div>
 						</div>
 					</div>

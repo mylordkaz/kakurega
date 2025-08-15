@@ -103,3 +103,8 @@
 .content-after-header {
   margin-top: 7rem; /* 112px - matches header height h-28 */
 }
+
+/* No line break utility for Japanese text */
+.no-break {
+  white-space: nowrap;
+}
