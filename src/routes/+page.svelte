@@ -837,8 +837,8 @@
 						<div>
 							<h4 class="text-card mb-2 text-lg font-semibold">アクセス</h4>
 							<div class="space-y-1 text-gray-100">
-								<p>• JR横浜線「町田駅」徒歩3分</p>
-								<p>• 小田急線「町田駅」徒歩5分</p>
+								<p>• JR横浜線「町田駅」徒歩5分</p>
+								<p>• 小田急線「町田駅」徒歩10分</p>
 							</div>
 						</div>
 
@@ -886,7 +886,7 @@
 	<!-- Social Media Section -->
 	<section class="bg-primary py-16">
 		<div class="container mx-auto px-4 text-center">
-			<h2 class="text-card mb-8 text-2xl font-bold">フォローしてください</h2>
+			<h2 class="text-card mb-8 text-2xl font-bold">是非フォローお願いします</h2>
 			<div class="flex justify-center space-x-8">
 				<!-- LINE -->
 				<a href="https://lin.ee/741xg1I" class="transition-all hover:scale-110" aria-label="LINE">
