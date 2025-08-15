@@ -87,8 +87,8 @@
 
 <main class="bg-primary min-h-screen">
 	<!-- Main Image Section -->
-	<section class="w-full content-after-header">
-		<img src="image1.webp" alt="" class="w-full h-auto object-cover" />
+	<section class="content-after-header w-full">
+		<img src="image1.webp" alt="" class="h-auto w-full object-cover" />
 	</section>
 
 	<!-- Reservation Button Section -->
@@ -128,12 +128,12 @@
 					今までの薄毛対策　メリットとデメリット
 				</h2>
 				<div class="space-y-8">
-					<p class="text-secondary text-lg leading-relaxed text-center">
+					<p class="text-secondary text-center text-lg leading-relaxed">
 						今までの薄毛対策は、内服薬や外用薬の使用が一般的でした。<br />
 						当店で使用する最先端科学のエステティックプラズマによる施術は、<br />
 						薬・サプリメントを使用しないので、副作用が一切ありません。
 					</p>
-					
+
 					<div class="text-center">
 						<img
 							src="/table.webp"
@@ -142,12 +142,20 @@
 							class="mx-auto h-auto w-full max-w-5xl shadow-lg"
 						/>
 					</div>
-					
+
 					<div class="bg-card-dark rounded-lg p-6">
-						<p class="text-white text-lg leading-relaxed text-center">
-							<span class="text-card border-card border-b-2 font-semibold brightness-150">薬・サプリメントは一切不使用</span><br />
-							KAKUREGA men's wellness labは、<span class="text-card border-card border-b-2 font-semibold brightness-150">"最先端の発毛技術"</span>と<br />
-							現役理容師による<span class="text-card border-card border-b-2 font-semibold brightness-150">"似合わせカット"</span>を組み合わせた<br />
+						<p class="text-center text-lg leading-relaxed text-white">
+							<span class="text-card border-card border-b-2 font-semibold brightness-150"
+								>薬・サプリメントは一切不使用</span
+							><br />
+							KAKUREGA men's wellness labは、<span
+								class="text-card border-card border-b-2 font-semibold brightness-150"
+								>"最先端の発毛技術"</span
+							>と<br />
+							現役理容師による<span
+								class="text-card border-card border-b-2 font-semibold brightness-150"
+								>"似合わせカット"</span
+							>を組み合わせた<br />
 							唯一無二のメンズ専門サロンです。
 						</p>
 					</div>
@@ -195,7 +203,128 @@
 									class="mx-auto h-auto max-w-full rounded-lg shadow-lg"
 								/>
 							</div>
+
+							<div class="mt-12 text-center">
+								<img
+									src="/approachImage2.webp"
+									alt="24Hカプセル技術"
+									loading="lazy"
+									width="400"
+									height="160"
+									class="mx-auto h-auto max-w-full rounded-lg shadow-lg"
+								/>
+							</div>
+
+							<div class="mt-8 space-y-4">
+								<h4 class="text-card text-lg font-semibold">
+									「副作用なし！薬を使わず、ずっと続ける必要がありません」
+								</h4>
+								<p class="leading-relaxed text-gray-100">
+									国家プロジェクトでの技術開発から誕生した24Hカプセル(ゆっくり長時間成分を放出し続ける特殊カプセル)によって、通常1〜2時間しか毛穴に滞在できない有効成分を、<span
+										class="text-card border-card border-b-2 font-semibold brightness-150"
+										>24時間毛穴に留める</span
+									>ことが可能になりました。<br />
+									薬やサプリメントを使用せず、より効果的に毛根レベルまで改善をしていくので、新毛が定着した後は施術をやめても再び抜けてしまうことはありません。頭皮ケアも<span
+										class="text-card border-card border-b-2 font-semibold brightness-150"
+										>徐々にフェードアウト</span
+									>していくことが可能です。
+								</p>
+							</div>
+
+							<div class="mt-12 flex flex-col justify-center gap-6 md:flex-row">
+								<img
+									src="/approachImage3.webp"
+									alt="施術の様子3"
+									loading="lazy"
+									class="h-auto max-w-full rounded-lg shadow-lg md:w-1/2"
+								/>
+								<img
+									src="/approachImage4.webp"
+									alt="施術の様子4"
+									loading="lazy"
+									class="h-auto max-w-full rounded-lg shadow-lg md:w-1/2"
+								/>
+							</div>
+
+							<div class="mt-8 space-y-4">
+								<h4 class="text-card text-lg font-semibold">
+									「唯一無二！現役理容師と頭皮専門家の融合」
+								</h4>
+								<p class="leading-relaxed text-gray-100">
+									<span class="text-card border-card border-b-2 font-semibold brightness-150"
+										>3万人</span
+									>近くの頭皮診断を行ってきた専門家と、<span
+										class="text-card border-card border-b-2 font-semibold brightness-150"
+										>毎月200名</span
+									>以上のメンズカットを担当する理容師が力を合わせることで、圧倒的な知識と経験から生まれる、今までになかった<span
+										class="text-card border-card border-b-2 font-semibold brightness-150"
+										>オーダーメイド</span
+									>のケアとヘアスタイル提案が実現。<br />
+									バーバーショップ内に併設のため、骨格・髪質・毛量に合わせたヘアカットや、ご自宅でのセットのやり方までわかりやすくお伝えさせていただきます。<br
+									/>
+									頭皮専門家と連携しながら、お客様が正しい知識を身につけ、ご自身の力で未来の髪を守り育てていけるよう、丁寧にサポートとアドバイスを行っています。
+								</p>
+							</div>
+
+							<div class="mt-12 flex flex-col justify-center gap-4 md:flex-row">
+								<img
+									src="/approachImage5.webp"
+									alt="理容師によるカット"
+									loading="lazy"
+									class="h-auto max-w-full rounded-lg shadow-lg md:w-1/3"
+								/>
+								<img
+									src="/approachImage6.webp"
+									alt="頭皮診断の様子"
+									loading="lazy"
+									class="h-auto max-w-full rounded-lg shadow-lg md:w-1/3"
+								/>
+								<img
+									src="/approachImage7.webp"
+									alt="カウンセリング"
+									loading="lazy"
+									class="h-auto max-w-full rounded-lg shadow-lg md:w-1/3"
+								/>
+							</div>
+
+							<div class="mt-8">
+								<p class="text-card text-center text-lg leading-relaxed font-semibold">
+									「あなたが本当に手に入れたいのは、"生える髪"ではなく、<span
+										class="border-card border-b-2 brightness-150">"似合う髪"</span
+									> ではありませんか？」
+								</p>
+							</div>
 						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Recommendation Section -->
+	<section class="bg-primary py-16">
+		<div class="container mx-auto px-4">
+			<div class="bg-card-dark mx-auto max-w-4xl rounded-lg p-8">
+				<h2 class="text-card mb-8 text-center text-3xl font-bold">こんな方にお勧めです</h2>
+				
+				<ul class="space-y-4 text-lg text-gray-100 mb-8">
+					<li>・本当は挑戦したい髪型があるのに、選択肢が狭くなったと感じている方</li>
+					<li>・理美容室で髪型のオーダーをしづらくなった方</li>
+					<li>・仕事や恋愛で第一印象をもっと良くしたいと思っている方</li>
+					<li>・写真やSNSに写る自分に自信を持ちたい方</li>
+					<li>・薬やサプリに頼らず、自分の髪を取り戻したい方</li>
+					<li>・年齢を重ねても清潔感のあるヘアスタイルを維持し続けたい方</li>
+				</ul>
+				
+				<div class="text-center space-y-6">
+					<p class="text-card text-xl font-semibold">
+						「一つでも当てはまった方、まずは密度＆毛根診断からお試しください。」
+					</p>
+					<div>
+						<p class="text-gray-100 text-lg mb-4">初回診断の詳細はこちら</p>
+						<a href="https://lin.ee/741xg1I" class="transition-all hover:scale-110" aria-label="LINE">
+							<img src="/icons/line.svg" alt="LINE" class="h-20 w-20 mx-auto" />
+						</a>
 					</div>
 				</div>
 			</div>
