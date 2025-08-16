@@ -12,11 +12,6 @@ const config = {
 			},
 			nodeCompat: true
 		}),
-		prerender: {
-			handleHttpError: 'warn',
-			entries: ['*'],
-			concurrency: 1
-		},
 		csp: {
 			mode: 'auto',
 			directives: {
