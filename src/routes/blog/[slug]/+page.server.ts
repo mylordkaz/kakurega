@@ -2,6 +2,8 @@ import { client, type BlogPost } from '$lib/microcms';
 import { error } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 
+export const prerender = false;
+
 export const load: PageServerLoad = async ({ params }) => {
 	try {
 		const response = await client.get({

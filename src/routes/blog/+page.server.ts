@@ -1,6 +1,8 @@
 import { client, type BlogPost } from '$lib/microcms';
 import type { PageServerLoad } from './$types';
 
+export const prerender = false;
+
 export const load: PageServerLoad = async () => {
 	try {
 		const response = await client.get({
