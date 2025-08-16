@@ -5,6 +5,7 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 const config = {
 	preprocess: vitePreprocess(),
 	kit: {
+
 		adapter: adapter({
 			routes: {
 				include: ['/*'],
@@ -12,6 +13,7 @@ const config = {
 			},
 			nodeCompat: true
 		}),
+
 		csp: {
 			mode: 'auto',
 			directives: {
