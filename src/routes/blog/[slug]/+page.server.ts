@@ -4,7 +4,14 @@ import type { PageServerLoad } from './$types';
 
 export const prerender = false;
 
-export const load: PageServerLoad = async ({ params }) => {
+export const load: PageServerLoad = async ({ params, setHeaders }) => {
+	// Set cache headers to prevent stale content
+	setHeaders({
+		'cache-control': 'no-cache, no-store, must-revalidate',
+		'pragma': 'no-cache',
+		'expires': '0'
+	});
+
 	try {
 		const response = await client.get({
 			endpoint: 'blogs',
