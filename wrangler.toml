@@ -1,6 +1,8 @@
 name = "kakurega"
-compatibility_date = "2023-05-18"
+
+compatibility_date = "2024-07-22"
+compatibility_flags = ["nodejs_compat"]
+
 
 [site]
-bucket = "./build"
-
+bucket = ".svelte-kit/cloudflare"
