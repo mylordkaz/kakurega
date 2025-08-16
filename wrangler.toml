@@ -1,12 +1,9 @@
 name = "kakurega"
-main = ".svelte-kit/cloudflare/index.js"
 compatibility_date = "2024-07-22"
 compatibility_flags = ["nodejs_compat"]
 
+[site]
+bucket = ".svelte-kit/cloudflare"
+
 [build]
 command = "npm run build"
-
-[assets]
-directory = ".svelte-kit/cloudflare/assets"
-binding = "ASSETS"
-
