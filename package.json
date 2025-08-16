@@ -42,6 +42,7 @@
 		"wrangler": "^4.25.0"
 	},
 	"dependencies": {
+		"@sveltejs/adapter-cloudflare": "^7.2.1",
 		"microcms-js-sdk": "^3.2.0"
 	}
 }

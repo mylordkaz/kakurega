@@ -1,2 +1,1 @@
-// Remove global prerender to allow page-level control
-// export const prerender = true;
+export const prerender = true;
