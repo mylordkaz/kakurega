@@ -1,2 +1,6 @@
-cache-control: public, max-age=31536000, immutable
+name = "kakurega"
+compatibility_date = "2023-05-18"
+
+[site]
+bucket = "./build"
 
