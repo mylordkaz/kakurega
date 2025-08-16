@@ -5,8 +5,11 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vite dev",
+		"dev:wrangler": "wrangler pages dev build --compatibility-date=2024-10-31",
 		"build": "vite build",
 		"preview": "vite preview",
+		"pages:dev": "npm run build && wrangler pages dev build",
+		"pages:deploy": "npm run build && wrangler pages deploy build",
 		"prepare": "svelte-kit sync || echo ''",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
