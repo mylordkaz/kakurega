@@ -6,12 +6,11 @@ const config = {
 	preprocess: vitePreprocess(),
 	kit: {
 		adapter: adapter({
-			platformProxy: {
-				configPath: 'wrangler.toml',
-				environment: undefined,
-				experimentalJsonConfig: false,
-				persist: false
-			}
+			routes: {
+				include: ['/*'],
+				exclude: []
+			},
+			nodeCompat: true
 		}),
 		prerender: {
 			handleHttpError: 'warn',
