@@ -13,7 +13,7 @@ const config = {
 		}),
 		prerender: {
 			handleHttpError: 'warn',
-			entries: ['*'],
+			entries: ['/'],
 			concurrency: 1
 		},
 		csp: {
