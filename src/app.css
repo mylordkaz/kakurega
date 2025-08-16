@@ -44,7 +44,7 @@
 
 /* Font Configuration */
 * {
-  font-family: 'Roboto', sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: 'Shippori Mincho', serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
 /* Utility Classes for Reusable Color Patterns */
@@ -97,4 +97,14 @@
   background-color: var(--color-bg-card-dark);
   border: 2px solid var(--color-border-primary);
   box-shadow: 0 8px 25px var(--shadow-brown);
+}
+
+/* Header spacing utility */
+.content-after-header {
+  margin-top: 7rem; /* 112px - matches header height h-28 */
+}
+
+/* No line break utility for Japanese text */
+.no-break {
+  white-space: nowrap;
 }

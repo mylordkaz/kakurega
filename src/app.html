@@ -5,17 +5,47 @@
 		<link rel="icon" type="image/png" href="/kakuregaFavicon.png" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
+		<!-- DNS prefetch for external domains -->
+		<link rel="dns-prefetch" href="//fonts.googleapis.com" />
+		<link rel="dns-prefetch" href="//fonts.gstatic.com" />
+		<link rel="dns-prefetch" href="//static.elfsight.com" />
+		<link rel="dns-prefetch" href="//www.google.com" />
+
 		<!-- Preconnect to external resources -->
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
 
-		<!-- Elfsight Instagram Feed -->
-		<script src="https://static.elfsight.com/platform/platform.js" async></script>
+		<!-- Optimized font loading with preload -->
+		<link href="https://fonts.googleapis.com/css2?family=Delius&family=Kaisei+Opti:wght@400;500;700&family=Shippori+Mincho&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+		<!-- Preload critical resources -->
+		<link rel="preload" href="/kakuregaFavicon.png" as="image" type="image/png" />
 
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="hover">
 		<div style="display: contents">%sveltekit.body%</div>
+		<!-- Performance monitoring -->
+		<script>
+		// Report Core Web Vitals
+		function reportWebVitals() {
+			if ('web-vital' in window) return;
+
+			// Simple performance tracking
+			window.addEventListener('load', () => {
+				// Measure and log loading performance
+				const perfData = performance.timing;
+				const loadTime = perfData.loadEventEnd - perfData.navigationStart;
+
+				// Only log in development
+				if (window.location.hostname === 'localhost') {
+					console.log('Page Load Time:', loadTime + 'ms');
+				}
+			});
+		}
+
+		// Call performance monitoring
+		reportWebVitals();
+		</script>
 	</body>
 </html>

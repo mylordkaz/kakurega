@@ -7,10 +7,33 @@ const config = {
 	kit: {
 		adapter: adapter({
 			pages: 'build',
-			assets: 'build'
+			assets: 'build',
+			fallback: undefined,
+			strict: true
 		}),
 		prerender: {
-			handleHttpError: 'warn'
+			handleHttpError: 'warn',
+			entries: ['*'],
+			concurrency: 1
+		},
+		csp: {
+			mode: 'auto',
+			directives: {
+				'script-src': [
+					'self',
+					'unsafe-inline',
+					'https://static.elfsight.com',
+					'https://fonts.googleapis.com'
+				],
+				'style-src': ['self', 'unsafe-inline', 'https://fonts.googleapis.com'],
+				'font-src': ['self', 'https://fonts.gstatic.com'],
+				'img-src': ['self', 'data:', 'https:'],
+				'connect-src': ['self', 'https:']
+			}
+		},
+		// Enable service worker for caching
+		serviceWorker: {
+			register: false // Set to true when using PWA features
 		}
 	}
 };
