@@ -8,8 +8,8 @@ const config = {
 		adapter: adapter({
 			pages: 'build',
 			assets: 'build',
-			fallback: undefined,
-			strict: true
+			fallback: '200.html',
+			strict: false
 		}),
 		prerender: {
 			handleHttpError: 'warn',
