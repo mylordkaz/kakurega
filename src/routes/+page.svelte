@@ -895,7 +895,7 @@
 
 				<!-- Instagram -->
 				<a
-					href="https://www.instagram.com/kakurega.mwl?igsh=MWV3N2ZhNXQzMGRy"
+					href="https://www.instagram.com/kakurega.men?igsh=MWV3N2ZhNXQzMGRy"
 					class="transition-all hover:scale-110"
 					aria-label="Instagram"
 				>
